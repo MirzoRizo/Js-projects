@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Poppins, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0eef1;
+}
+.color {
+  background-color: #a4c3b2;
+  color: white;
+}
+.header {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding: 10px;
+  color: black;
+}
+.header button {
+  width: 70px;
+}
+.main {
+  width: 60%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto, auto);
+  /* display: none; */
+  padding: 10px;
+  gap: 10px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.3s ease-in-out;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overlay.active {
+  display: block;
+}
+
+form {
+  border-radius: 5px;
+  height: 12em;
+  width: 9em;
+  background-color: #a4c3b2;
+  padding: 10px;
+  margin: 25vh auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+form > input {
+  width: 100%;
+  font-size: 10px;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: #f0eef1;
+}
+input:focus {
+  outline: 1px solid gray;
+}
+
+.check {
+  width: 90%;
+  font-size: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#check {
+  width: 10px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 50px;
+  font-size: 8px;
+  font-weight: 500;
+  background-color: #f0eef1;
+  border: none;
+  border-radius: 3px;
+  padding: 4px;
+  cursor: pointer;
+}
+button:hover {
+  filter: brightness(90%);
+  transition: 400ms;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #a4c3b2;
+  font-size: 10px;
+  height: 9rem;
+  width: 8.5rem;
+  border-radius: 4px;
+  color: black;
+  padding: 10px;
+  word-break: break-all;
+}
+.card > button {
+  width: 100%;
+}
+
+.read-btn {
+  background-color: #91f291;
+  transition: 300ms;
+}
+.unread-btn {
+  background-color: #ff0000;
+  transition: 300ms;
+}
