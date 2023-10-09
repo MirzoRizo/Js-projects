@@ -7,39 +7,40 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="modal">
-      <form>
-        <h5>Add New Book</h5>
-        <input
-          id="bookName"
-          type="text"
-          placeholder="Book"
-          name="bookName"
-          autocomplete="off"
-          required
-        />
-        <input
-          id="author"
-          type="text"
-          placeholder="Author"
-          name="author"
-          autocomplete="off"
-          required
-        />
-        <input
-          id="pages"
-          type="number"
-          placeholder="Pages"
-          name="pages"
-          autocomplete="off"
-          required
-        />
-        <div class="buttons">
-          <button class="confirm-btn" type="submit">Confirm</button>
-        </div>
-      </form>
+    <div class="overlay">
+      <div class="modal">
+        <form>
+          <h5>Add New Book</h5>
+          <input
+            id="bookName"
+            type="text"
+            placeholder="Book"
+            name="bookName"
+            autocomplete="off"
+            required
+          />
+          <input
+            id="author"
+            type="text"
+            placeholder="Author"
+            name="author"
+            autocomplete="off"
+            required
+          />
+          <input
+            id="pages"
+            type="number"
+            placeholder="Pages"
+            name="pages"
+            autocomplete="off"
+            required
+          />
+          <div class="buttons">
+            <button class="confirm-btn" type="submit">Confirm</button>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="overlay"></div>
     <div class="color">
       <div class="header">
         <h5>MyLibrary</h5>

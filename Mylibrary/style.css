@@ -37,23 +37,8 @@ body {
   gap: 10px;
 }
 
-.modal {
-  position: fixed;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  text-align: center;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 0.3s ease-in-out;
-}
-
-.modal.active {
-  transform: translate(-50%, -50%) scale(1);
-}
-
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   display: none;
@@ -63,9 +48,13 @@ body {
 }
 
 .overlay.active {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.modal {
+  transform: scale(1);
+}
 form {
   border-radius: 5px;
   height: 12em;
@@ -138,11 +127,11 @@ button:hover {
   width: 100%;
 }
 
-.read-btn {
-  background-color: #91f291;
-  transition: 300ms;
-}
 .unread-btn {
   background-color: #ff0000;
-  transition: 300ms;
+  transition: 200ms;
+}
+.read-btn {
+  background-color: #91f291;
+  transition: 100ms;
 }
