@@ -17,25 +17,25 @@
 body {
   background: gray;
 }
-.container {
-  padding: 0 30vw 0 30vw;
+.burger {
+  display: none;
+  cursor: pointer;
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  font-weight: bold;
   background-color: #fff;
+  padding: 0 20vw 0 20vw;
 }
 
 .menu {
   cursor: pointer;
-  margin: 20px 30px;
+  margin-left: 20px;
 }
 .menu:hover {
-  margin: 0;
-  padding: 20px 30px;
+  padding: 21px 0;
 }
 
 .drop-menu {
@@ -44,16 +44,51 @@ body {
   justify-content: center;
   position: absolute;
   left: 0;
-  top: -200px;
+  top: -260px;
   height: 200px;
-  width: 100vw;
+  width: 99vw;
   background-color: green;
   z-index: -1;
-
   cursor: auto;
   transition: transform 200ms ease-in-out;
 }
 
 .menu:hover > .drop-menu {
-  transform: translateY(260px);
+  transform: translateY(320px);
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 80%;
+}
+
+@media (max-width: 900px) {
+  .menu-container {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .nav {
+    padding: 0 20vw 0 20vw;
+  }
+  .active-drop {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 60px;
+    right: 19.8vw;
+    width: 30%;
+    height: 200px;
+  }
+  .menu:hover {
+    padding: 0;
+  }
+  .drop-menu {
+    left: -50vw;
+  }
 }
