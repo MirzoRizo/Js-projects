@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>API</title>
+  </head>
+  <body>
+    <img src="" alt="" srcset="" />
+    <form action="">
+      <input class="text" type="text" />
+      <button class="btnInput">Send</button>
+    </form>
+    <script>
+      const input = document.querySelector('.text');
+      const btnInput = document.querySelector('.btnInput');
+      const img = document.querySelector('img');
+      btnInput.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log(input.value);
+        click(input.value);
+      });
+      function click(UserInput) {
+        fetch(
+          'https://api.giphy.com/v1/gifs/translate?api_key=4c9fv3YzDEXx4JXaZrBziHREyhFpRDUy&s=' +
+            UserInput,
+          { mode: 'cors' }
+        )
+          .then(function (response) {
+            return response.json();
+          }).catch(function (error) {
+            console.log(error);
+          })
+          .then(function (response) {
+            img.src = '';
+            img.src = response.data.images.original.url; // console.log
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
+    </script>
+  </body>
+</html>
